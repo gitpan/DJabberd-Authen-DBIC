@@ -1,24 +1,23 @@
 package DJabberd::Authen::DBIC;
 use strict;
-our $VERSION = 0.1;
-
-use base 'DJabberd::Authen';
-
-
-use DJabberd::Log;
-our $logger = DJabberd::Log->get_logger;
+use warnings;
 use Digest;
 use Carp;
 
-sub log {
-    $logger;
-}
+use base 'DJabberd::Authen';
+use DJabberd::Log;
 
 =head1 NAME
 
 DJabberd::Authen::DBIC - A DBIC authentication module for DJabberd
 
+=head1 VERSION
+
+Version 0.01
+
 =cut
+
+our $VERSION = '0.01';
 
 =head1 SYNOPSIS
 
@@ -46,6 +45,13 @@ DJabberd::Authen::DBIC - A DBIC authentication module for DJabberd
        </VHost>
 
 =cut
+
+our $logger = DJabberd::Log->get_logger;
+
+sub log {
+    $logger;
+}
+
 
 sub set_config_dbusername {
     $_[0]->{'dbic_dbusername'} = $_[1];
@@ -259,20 +265,64 @@ sub _prep_password {
 }
 
 
-1;
-__END__
+=head1 AUTHOR
+
+Guillermo Roditi, (groditi) C<< <groditi at cpan.org> >>
+
+=head1 BUGS
+
+Please report any bugs or feature requests to
+C<bug-djabberd-authen-dbic at rt.cpan.org>, or through the web interface at
+L<http://rt.cpan.org/NoAuth/ReportBug.html?Queue=DJabberd-Authen-DBIC>.
+I will be notified, and then you'll automatically be notified of progress on
+your bug as I make changes.
+
+=head1 SUPPORT
+
+You can find documentation for this module with the perldoc command.
+
+    perldoc DJabberd::Authen::DBIC
+
+You can also look for information at:
+
+=over 4
+
+=item * AnnoCPAN: Annotated CPAN documentation
+
+L<http://annocpan.org/dist/DJabberd-Authen-DBIC>
+
+=item * CPAN Ratings
+
+L<http://cpanratings.perl.org/d/DJabberd-Authen-DBIC>
+
+=item * RT: CPAN's request tracker
+
+L<http://rt.cpan.org/NoAuth/Bugs.html?Dist=DJabberd-Authen-DBIC>
+
+=item * Search CPAN
+
+L<http://search.cpan.org/dist/DJabberd-Authen-DBIC>
 
 =back
 
+=head1 ACKNOWLEDGEMENTS
+
+Based partly upon L<DBIx::Class::DigestColumns>.
+
 =head1 SEE ALSO
 
-L<DBIx::Class>,
 L<Digest>
+L<DBIx::Class>
+L<DJabberd>
+L<DJabberd::Authen>
 
-=head1 AUTHOR
+=head1 COPYRIGHT & LICENSE
 
-Guillermo Roditi (groditi) <groditi@cpan.org>
+Copyright 2006 Guillermo Roditi, all rights reserved.
 
-=head1 LICENSE
+This program is free software; you can redistribute it and/or modify it
+under the same terms as Perl itself.
 
-You may distribute this code under the same terms as Perl itself.
+=cut
+
+1; # End of DJabberd::Authen::DBIC

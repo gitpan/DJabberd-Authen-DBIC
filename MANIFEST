@@ -1,0 +1,12 @@
+Changes
+MANIFEST
+META.yml # Will be created by "make dist"
+Makefile.PL
+README
+TODO
+example.conf
+lib/DJabberd/Authen/DBIC.pm
+t/00-load.t
+t/boilerplate.t
+t/pod-coverage.t
+t/pod.t

@@ -1,0 +1,49 @@
+DJabberd-Authen-DBIC
+
+This is a DBIC Authen driver for DJabberd (http://www.danga.com/djabberd/).
+
+Since DJabberD is still very much in development and as of this writting not released to 
+CPAN I can not guarantee it will work with future versions. I will try to mantain it as 
+best as I can and respond to feature requests, but don't be surprised if I just forget
+about this module. I am on the DJabberd list and read it pretty regularly so that may
+be a good way of getting your questions answered. 
+
+This module assumes you are familiar with both DBIC and DJabberd as well as their more 
+advanced options. Have Fun!
+
+INSTALLATION
+
+To install this module, run the following commands:
+
+    perl Makefile.PL
+    make
+    make test
+    make install
+
+
+SUPPORT AND DOCUMENTATION
+
+After installing, you can find documentation for this module with the perldoc command.
+
+    perldoc DJabberd::Authen::DBIC
+
+You can also look for information at:
+
+    Search CPAN
+        http://search.cpan.org/dist/DJabberd-Authen-DBIC
+
+    CPAN Request Tracker:
+        http://rt.cpan.org/NoAuth/Bugs.html?Dist=DJabberd-Authen-DBIC
+
+    AnnoCPAN, annotated CPAN documentation:
+        http://annocpan.org/dist/DJabberd-Authen-DBIC
+
+    CPAN Ratings:
+        http://cpanratings.perl.org/d/DJabberd-Authen-DBIC
+
+COPYRIGHT AND LICENCE
+
+Copyright (C) 2006 Guillermo Roditi
+
+This program is free software; you can redistribute it and/or modify it
+under the same terms as Perl itself.

@@ -1,0 +1,4 @@
+Write tests (I don't know how to do this yet)
+Support the third authen method (digest)
+Make the Makefile.PL have the deps I need 
+Figure out how this works since DJabberd is not yet on the CPAN
